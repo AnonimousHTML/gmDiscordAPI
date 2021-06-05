@@ -10,3 +10,13 @@
 * boolean disabled
 
 <h1></h1>
+
+<h3 align="center"> void component.addLinkButton</h3>
+
+---
+* string url
+* string label
+* [emoji](emoji.md) !emoji
+* boolean !disabled
+
+<h1></h1>

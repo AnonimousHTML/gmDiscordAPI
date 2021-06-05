@@ -40,3 +40,11 @@
 * function !callback
 
 <h1></h1>
+
+<h3 align="center"> void guild.swapChannels</h3>
+
+---
+* string channelID
+* string channelID2
+
+<h1></h1>
