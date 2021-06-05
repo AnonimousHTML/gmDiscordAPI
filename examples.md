@@ -21,6 +21,7 @@ discordClient.on("ButtonInteraction","response",function(interaction)
     end
 end)
 
+discordClient.login()
 ```
 
 <h1 align="center"></h1>
@@ -33,8 +34,7 @@ if SERVER
 then
     if discordClient then discordClient.destroy() discordClient = nil end
     discordClient = discordlib.client(token)
-    discordClient.login()
-    
+
     util.AddNetworkString("chatPrint")
 
     -- This is a bad implementation of chatprint it is written just for example
@@ -77,6 +77,8 @@ then
         end)
 
     end)
+
+    discordClient.login()
 else
     net.Receive("chatPrint", function()
         chat.AddText(unpack(net.ReadTable()))
