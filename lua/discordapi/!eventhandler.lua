@@ -4,10 +4,6 @@ function discordlib.handleEvent(client, payload)
     local fn = EVENT_HANDLERS[payload.t]
     if fn
     then
-        local uid = tostring(CurTime())
-        hook.Add("Think", uid,function()
-            hook.Remove("Think", uid)
-        end)
         fn(client, payload.d)
     end
 #ifdef DISCORD_DEBUG

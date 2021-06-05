@@ -30,14 +30,5 @@ function discordlib.structures.channel(client, channel, guild)
         client.modifyChannel(channel.id, {topic = topic}, callback)
     end
 
-    // Only iterables may be used in a ListType ???
-    //function channel.setPosition(position = !err, callback)
-    //    client.modifyGuildChannel(guild.id, {id = channel.id, position = position}, callback)
-    //end
-
-    //function channel.setParent(parentID = !err, callback)
-    //    client.modifyGuildChannel(guild.id, {id = channel.id, parent_id = parentID}, callback)
-    //end
-
     return channel
 end

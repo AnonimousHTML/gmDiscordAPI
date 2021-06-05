@@ -24,7 +24,7 @@ end
 function discordlib.component()
     local component = {type = 1, components = {}}
 
-    function component.addButton(customID = !err, style = !err, label = !err, emoji, disabled = !err)
+    function component.addButton(customID = !err, style = !err, label = !err, emoji, disabled)
         if #component.components > 5 then error("Exceeded the limit on the number of buttons(6)") end
         component.components[#component.components + 1] = {
             type = 2,style = style,label = label, emoji = emoji and emojid(emoji), disabled = disabled, custom_id = customID
@@ -33,15 +33,15 @@ function discordlib.component()
         return component
     end
     
-    // ['components'] : [1] = '0' ?????? wtf discord
-    //function component.addLinkButton(label = !err, url = !err, emoji, disabled = !err, customID = !err)
-    //    if #component.components > 5 then error("Exceeded the limit on the number of buttons(6)") end
-    //    component.components[#component.components + 1] = {
-    //        type = 2,style = 4,label = label, url = url, emoji = emoji and emojid(emoji), disabled = disabled, custom_id = customID
-    //    }
+    
+    function component.addLinkButton(url = !err, label = !err, emoji, disabled)
+        if #component.components > 5 then error("Exceeded the limit on the number of buttons(6)") end
+        component.components[#component.components + 1] = {
+            type = 2,style = 5,label = label, url = url, emoji = emoji and emojid(emoji), disabled = disabled
+        }
 
-    //    return component
-    //end
+        return component
+    end
 
     return component
 end

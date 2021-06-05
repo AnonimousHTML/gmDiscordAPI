@@ -66,7 +66,7 @@ end
 
 local handleEvent = discordlib.handleEvent
 
-function discordlib.client(token)
+function discordlib.client(token = !err)
     local client = {}
 
     client.ws = GWSockets.createWebSocket("wss://gateway.discord.gg/?v=9&encoding=json")
@@ -257,7 +257,7 @@ function discordlib.client(token)
     function client.HTTPRequest(endpoint, method, postdata, callback, rate_limiter_id)
         local request = {
             method = method,
-            url = "https://discordapp.com/api/v6/" .. endpoint,
+            url = "https://discordapp.com/api/v9/" .. endpoint,
             headers = {
                 ["Authorization"] = "Bot " .. token,
                 ["Content-Type"] = "application/json"

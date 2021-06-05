@@ -51,5 +51,17 @@ function discordlib.structures.guild(client, guild)
         client.deleteGuildCommand(guild.id, commandID, callback)
     end
 
+    function guild.swapChannels(channelID = !err, channelID2 = !err, callback)
+        local channels = guild.channels
+        local pos1 = channels[channelID].position or 0
+        local pos2 = channels[channelID2].position or 0
+        if pos1 == pos2
+        then
+            return client.modifyGuildChannel(guild.id, {{id = channelID, position = 0},{id = channelID2, position = 1}}, callback)
+        end
+
+        client.modifyGuildChannel(guild.id, {{id = channelID, position = (pos1 > pos2) and 0 or 1},{id = channelID2, position = (pos1 > pos2) and 1 or 0}}, callback)
+    end
+
     return guild
 end
