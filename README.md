@@ -19,8 +19,8 @@
 <h3 align="center">
 
 [Hot to setup bot](https://github.com/devonium/gmDiscordAPI/blob/docs/howtosetupbot.md)  
-[Documentation](https://github.com/devonium/gmDiscordAPI/blob/docs/README.md)  
 [Examples](https://github.com/devonium/gmDiscordAPI/blob/docs/examples.md)  
+[Documentation](https://github.com/devonium/gmDiscordAPI/blob/docs/README.md)  
 [Issues](https://github.com/devonium/gmDiscordAPI/issues)
 
 </h3>
